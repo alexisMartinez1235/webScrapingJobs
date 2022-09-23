@@ -1,0 +1,9 @@
+{
+  "watch": ["webScrapingJobs"],
+  "ext": "py",
+  "ignore": ["webScrapingJobs/***.cpython-311.pyc"],
+  "exec": "pipenv run python",
+  "args" : [
+    "init.py"
+  ]
+}

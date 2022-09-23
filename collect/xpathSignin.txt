@@ -1,0 +1,6 @@
+//div[
+  //*[contains(text(), 'Email')] and
+  //*[contains(text(), 'Password')] and
+  //*[contains(text(), 'Agree & Join')] and
+  //*[contains(text(), 'you agree')]
+]
