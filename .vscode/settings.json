@@ -1,7 +1,11 @@
 {
-  "python.testing.pytestArgs": [
-    "webScrapingJobs"
-  ],
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./tests",
+    "-p",
+    "*_test.py"
+  ]
 }
