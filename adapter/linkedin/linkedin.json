@@ -1,0 +1,9 @@
+{
+  "keywords_name": "keywords",
+  "location_name": "location",
+  "sign_in_page_path": "xpath_signin",
+  "keyword_first_prediction": "keywords-1",
+  "job_post_classname": "two-pane-serp-page__detail-view",
+  "show_more_xpath": "//*[contains(text(), 'Show more')]",
+  "description_classname": "show-more-less-html__markup"
+}

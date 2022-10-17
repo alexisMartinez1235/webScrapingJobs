@@ -13,7 +13,6 @@ class Database(object):
   URI: str = "mongodb://{}:{}@mongo:27017/?authMechanism=DEFAULT".format(rootUser, password)
   client: MongoClient 
 
-
   def __new__(cls):
     if cls._instance is None:
       print('Creating new instance')
@@ -23,10 +22,7 @@ class Database(object):
   def __init__(self):
     self.client = MongoClient(self.URI)
     self.database = self.client[databaseName]
-  
-  def create_collection(self, collection: str):
-    pass
-
+    
   def get_collection(self, collection: str) -> Collection:
     return self.database[collection]
   

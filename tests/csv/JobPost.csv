@@ -1,2 +1,3 @@
-company,title,description,salary,dateInit,dateEnd
-,title example,description text.,,,
+company|title|description|salary|dateInit|dateEnd|location
+|title example|description text, ..||||
+|title example|description text, ..||||

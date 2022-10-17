@@ -130,4 +130,7 @@ dmypy.json
 
 collect/screenshot/*
 collect/logs/*
+collect/csv/*
 .wdm/
+
+element/_*  

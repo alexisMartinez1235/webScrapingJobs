@@ -1,6 +1,7 @@
 
 from element.CsvElement import CsvElement
 
+print()
 
 class Company(CsvElement):
   def __init__(self, data: dict, name: str, description: str):
