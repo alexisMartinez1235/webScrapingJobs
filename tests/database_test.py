@@ -2,16 +2,17 @@ import unittest
 from database.Database import Database
 from bson.json_util import dumps, loads
 
-from element.CsvElement import CsvElement
+from connection.Csv import CsvConnection
 
 class Test_Database(unittest.TestCase):
   def test_database_connection(self):
-    exampleElement = CsvElement({
+    exampleElement = CsvConnection("test.csv", ["message"], True)
+    exampleElement.append({
       "message": "hello world"
-    }, "test.csv", ["message"], True)
+    })
 
     jobPostCollection = Database().get_collection('test')
-    response_insert = exampleElement.append().save().save_on_database()
+    response_insert = exampleElement.save().save_on_database()
 
     savedDocument = jobPostCollection.find({
       "_id": response_insert.inserted_id,

@@ -3,7 +3,18 @@
   "location_name": "location",
   "sign_in_page_path": "xpath_signin",
   "keyword_first_prediction": "keywords-1",
+  "id_jobpost": "data-entity-urn",
+  "id_enterprise": "topcard__org-name-link",
+  "class_name_location": "topcard__org-name-link",
   "job_post_classname": "two-pane-serp-page__detail-view",
+  "job_post_applicant_count_classname": "num-applicants__caption",
+  "job_post_since_classname": "posted-time-ago__text",
   "show_more_xpath": "//*[contains(text(), 'Show more')]",
-  "description_classname": "show-more-less-html__markup"
+  "description_classname": "show-more-less-html__markup",
+  "older": {
+    "id_enterprise": "jobs-unified-top-card__company-name",
+    "class_name_location": "jobs-unified-top-card__bullet",
+    "job_post_since_classname": "jobs-unified-top-card__posted-date",
+    "job_post_applicant_count_classname": "jobs-unified-top-card__applicant-count"
+  }
 }

@@ -1,9 +1,9 @@
-from element.CsvElement import CsvElement
+from connection.Csv import CsvConnection
 
-class Requeriment(CsvElement):
+class Requeriment(CsvConnection):
   def __init__(self, name: str) -> None:
     
-    CsvElement.__init__(self, "Requeriment.csv", ["name"])
+    CsvConnection.__init__(self, "Requeriment.csv", ["name"], False)
     self.name = name
     self.relatedWithList = []
   

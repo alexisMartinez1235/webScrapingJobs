@@ -12,6 +12,8 @@ pytest = "*"
 pymongo = "*"
 pytelegraf = "*"
 influxdb-client = "*"
+cryptocode = "*"
+lxml = "*"
 
 [dev-packages]
 

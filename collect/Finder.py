@@ -110,6 +110,8 @@ class Finder(object):
 
     self.driver.get(url)
     self.soup = BeautifulSoup(self.driver.page_source)
+    with open("index.html", "w+") as file:
+        file.write(str(self.soup))
 
     self.xpathSignin = open("adapter/" + web_page + "/xpath_signin.txt", "r").read()
     self.json = json.load(open("adapter/" + web_page + "/" + web_page + ".json"))
@@ -123,8 +125,13 @@ class Finder(object):
     searchKeyword.send_keys(Keys.ARROW_LEFT)
 
     # self.waitElement(By.ID, "keywords-1").click()
-    self.driver.find_element(By.ID, self.json["keyword_first_prediction"]).click()
-  
+    try:
+      self.driver.find_element(By.ID, self.json["keyword_first_prediction"]).click()
+    
+    except Exception as err:
+      searchKeyword.send_keys(Keys.ENTER)
+      print(err)
+
   @skip_create_account_with_limit(3, False, findSigninPage=True)
   @sendTimeResponseFunction
   def write_location(self, location):
@@ -141,6 +148,7 @@ class Finder(object):
 
   def scroll_to_item_list(self, action, html_list, y_size_post_element: int, itemNum: int, err_scroll: int):
     action.move_to_element(html_list).perform()
+    time.sleep(0.2)
     scriptScroll ="window.scrollTo(0,{})".format(random.gauss(y_size_post_element * itemNum, err_scroll))
     self.driver.execute_script(scriptScroll)
   

@@ -131,6 +131,10 @@ dmypy.json
 collect/screenshot/*
 collect/logs/*
 collect/csv/*
+tests/csv/*
+
 .wdm/
 
-element/_*  
+element/_*
+index.html
+collect/passkey.txt
